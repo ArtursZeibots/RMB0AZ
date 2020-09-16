@@ -1,17 +1,14 @@
 # RMB0AZ
 ## Klade
-    1  VirtualBox --startvm XP
-    2  quartus
-    3  uname
-    4  uname 
-    5  uname -a
-    6  echo $0
-    7  whoami
-    8  who
-    9  man uname
-   10  history
-   11  sh
-   12  pwd
-   13  ls
-   14  ls -l
-   15  history
+**uname** - parāda OS nosaukumu
+**uname -a** - parāda pilno OS nosaukumu
+**echo $0** - parāda 
+**whoami** - parāda lietotāja vārdu
+**who** - informācija par lietotāju
+**man** - ar komandu aiz tā parāda komandas skaidrojumu
+**history** - parāda iepriekš lietotās komandas
+**sh** - izslēdz shell
+**pwd** - parāda adresi
+**ls** - parāda adrešu sarakstu
+**ls -l** - parāda plašāku adrešu sarakstu
+**history** - parāda komandu vēsturi
