@@ -1,14 +1,14 @@
 # RMB0AZ
-## Klade
-**uname** - parāda OS nosaukumu
-**uname -a** - parāda pilno OS nosaukumu
-**echo $0** - parāda 
-**whoami** - parāda lietotāja vārdu
-**who** - informācija par lietotāju
-**man** - ar komandu aiz tā parāda komandas skaidrojumu
-**history** - parāda iepriekš lietotās komandas
-**sh** - izslēdz shell
-**pwd** - parāda adresi
-**ls** - parāda adrešu sarakstu
-**ls -l** - parāda plašāku adrešu sarakstu
-**history** - parāda komandu vēsturi
+## Klade <br/>
+**uname** - parāda OS nosaukumu<br/>
+**uname -a** - parāda pilno OS nosaukumu<br/>
+**echo $0** - parāda atrašanās vietas adresi<br/>
+**whoami** - parāda lietotāja vārdu<br/>
+**who** - informācija par lietotāju<br/>
+**man** - ar komandu aiz tā parāda komandas skaidrojumu<br/>
+**history** - parāda iepriekš lietotās komandas<br/>
+**sh** - izslēdz shell<br/>
+**pwd** - parāda adresi<br/>
+**ls** - parāda adrešu sarakstu<br/>
+**ls -l** - parāda plašāku adrešu sarakstu<br/>
+**history** - parāda komandu vēsturi<br/>
