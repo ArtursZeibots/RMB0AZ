@@ -24,7 +24,7 @@
 **0a** - komandas pārcelšanas simbols<br/>
 **nano** - atver nano<br/>
 **rm (fails)** - dzēst failu<br/>
-**rm (*pirmie divi simboli no saknes*)** - dzēš visus failus ar šo saknes sākumu<br/>
+**rm (pirmie divi simboli no saknes)** - dzēš visus failus ar šo saknes sākumu<br/>
 **cp** - kopēt failu<br/>
 **mv** - pārcelt failu<br/>
 **tree** - parāda dir tree<br/>
@@ -32,8 +32,8 @@
 **ls Desktop/** - parāda /Desktop adrešu sarakstu<br/>
 **ls -a** - parāda adrešu sarakstu ieskaitot slēptās adreses<br/>
 **ls -a -l** - parāda pilnu adrešu sarakstu, ieskaitot slēptās adreses<br/>
-**cd ~** - pārvieto uz sākuma adresi<br/>
-**cd home/user** - -||-<br/>
+**cd ** - pārvieto uz sākuma adresi<br/>
+**cd home/user** - tas pats<br/>
 **cd /** - pārvieto uz root adresi<br/>
 **ls -lt** - parāda pilno adrešu sarakstu sākot ar visnesenāko failu<br/>
 **PATH=$PATH:~** - pievieno jaunu PATH<br/>
