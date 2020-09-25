@@ -29,12 +29,11 @@
 **mv** - pārcelt failu<br/>
 **tree** - parāda dir tree<br/>
 **chomd** - maina rights failam<br/>
-**ls Desktop/** - parāda /Desktop adrešu sarakstu
-**ls -l Desktop/**
-**ls -a** - parāda adrešu sarakstu ieskaitot slēptās adreses
-**ls -a -l** - parāda pilnu adrešu sarakstu, ieskaitot slēptās adreses
-**cd ~** - pārvieto uz sākuma adresi
-**cd home/user** - -||-
-**cd /** - pārvieto uz root adresi
-**ls -lt** - parāda pilno adrešu sarakstu sākot ar visnesenāko failu
-**PATH=$PATH:~** - pievieno jaunu PATH
+**ls Desktop/** - parāda /Desktop adrešu sarakstu<br/>
+**ls -a** - parāda adrešu sarakstu ieskaitot slēptās adreses<br/>
+**ls -a -l** - parāda pilnu adrešu sarakstu, ieskaitot slēptās adreses<br/>
+**cd ~** - pārvieto uz sākuma adresi<br/>
+**cd home/user** - -||-<br/>
+**cd /** - pārvieto uz root adresi<br/>
+**ls -lt** - parāda pilno adrešu sarakstu sākot ar visnesenāko failu<br/>
+**PATH=$PATH:~** - pievieno jaunu PATH<br/>
