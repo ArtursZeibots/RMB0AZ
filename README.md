@@ -37,3 +37,8 @@
 **cd /** - pārvieto uz root adresi<br/>
 **ls -lt** - parāda pilno adrešu sarakstu sākot ar visnesenāko failu<br/>
 **PATH=$PATH:~** - pievieno jaunu PATH<br/>
+git config --global user.email arthur.zeibots@gmail.com<br/>
+git add . <br/>
+git commit -m "20200928"<br/>
+git commit -m "20200928" <br/>
+
