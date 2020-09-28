@@ -1,0 +1,2 @@
+//Komentārs
+main(){}
