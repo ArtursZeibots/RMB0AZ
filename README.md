@@ -1,24 +1,18 @@
 # RMB0AZ<br/>
 ## Klade <br/>
-+++<br/>
-###**ls**<br/>
-+++<br/>
+## ls
 **ls** - parāda adrešu sarakstu<br/>
 **ls -l** - parāda plašāku adrešu sarakstu<br/>
 **ls Desktop/** - parāda /Desktop adrešu sarakstu<br/>
 **ls -a** - parāda adrešu sarakstu ieskaitot slēptās adreses<br/>
 **ls -a -l** - parāda pilnu adrešu sarakstu, ieskaitot slēptās adreses<br/>
 **ls -lt** - parāda pilno adrešu sarakstu sākot ar visnesenāko failu<br/>
-+++<br/>
-###**cd**<br/>
-+++<br/>
+## cd
 **cd ..** - atpakaļ<br/>
 **cd (tilde)** - pārvieto uz sākuma adresi<br/>
 **cd home/user** - tas pats<br/>
 **cd /** - pārvieto uz root adresi<br/>
-+++<br/>
-###**Failu mod**<br/>
-+++<br/>
+## Failu mod
 **mkdir** - make directory<br/>
 **rmdir** - remove directory<br/>
 **touch** - uztaisa tukšu failu<br/>
@@ -28,9 +22,7 @@
 **cp** - kopēt failu<br/>
 **mv** - pārcelt failu<br/>
 **chomd** - maina rights failam<br/>
-+++<br/>
-###**MISC**<br/>
-+++<br/>
+## MISC
 **uname** - parāda OS nosaukumu<br/>
 **uname -a** - parāda pilno OS nosaukumu<br/>
 **echo $0** - parāda atrašanās vietas adresi<br/>
