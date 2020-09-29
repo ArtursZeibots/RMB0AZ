@@ -37,8 +37,10 @@
 **cd /** - pārvieto uz root adresi<br/>
 **ls -lt** - parāda pilno adrešu sarakstu sākot ar visnesenāko failu<br/>
 **PATH=$PATH:~** - pievieno jaunu PATH<br/>
-git config --global user.email arthur.zeibots@gmail.com<br/>
-git add . <br/>
-git commit -m "20200928"<br/>
-git commit -m "20200928" <br/>
+**git clone htpps://github.com/ArtursZeibots/RMB0AZ** - nokopē manu repozitoriju<br/>
+**nano first.c** - izveido un atver failu c valodā<br/>
+**gcc first.c** - kompilē skriptu c valodā<br/>
+**echo $?** - parāda pēdējā procesa rezultātu (0 =  nav kļūdu)<br/>
+**gcc first.c -o second.out** - kompilē skriptu, mainot nosaukumu<br/>
+**history > history_20200928.txt** - izdrukā komandu vēsturi failā<br/>
 
