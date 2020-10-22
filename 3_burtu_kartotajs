@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+void main ()
+{
+  char pirmais;
+  char otrais;
+  char tresais;
+  char izvele;
+  char sakartots[4];
+
+  printf ("Lūdzu ievadiet pirmo burtu: ");
+  scanf ("%s", &pirmais);
+  printf ("Lūdzu ievadiet otro burtu: ");
+  scanf ("%s", &otrais);
+  printf ("Lūdzu ievadiet treE!o burtu: ");
+  scanf ("%s", &tresais);
+  printf("Ja vēlaties, lai burtus sakārto alfabēta secībā, ievadiet burtu 'a', ja vēlaties, lai burtus sakārto pretēji alfabēta secībai, ievadiet burtu 'p'");
+  scanf ("%s", &izvele);
+
+  if (pirmais < otrais && pirmais < tresais)
+    {
+      sakartots[1] = pirmais;
+      if (otrais < tresais)
+	{
+	  sakartots[2] = otrais;
+	  sakartots[3] = tresais;
+	}
+      else
+	{
+	  sakartots[2] = tresais;
+	  sakartots[3] = otrais;
+	}
+    }
+  else if (otrais < pirmais && otrais < tresais)
+    {
+      sakartots[1] = otrais;
+      if (pirmais < tresais)
+	{
+	  sakartots[2] = pirmais;
+	  sakartots[3] = tresais;
+	}
+      else
+	{
+	  sakartots[3] = pirmais;
+	  sakartots[2] = tresais;
+	}
+    }
+  else if (tresais < pirmais && tresais < otrais)
+    {
+      sakartots[1] = tresais;
+      if (pirmais < otrais)
+	{
+	  sakartots[2] = pirmais;
+	  sakartots[3] = otrais;
+	}
+      else
+	{
+	  sakartots[2] = otrais;
+	  sakartots[3] = pirmais;
+	}
+    }
+
+  if (izvele == 'a')
+    {
+      printf ("Burti sakārtoti alfabēta secībā ir %c,%c,%c\n", sakartots[1], sakartots[2], sakartots[3]);
+
+    }
+  else
+    {
+      printf ("Burti sakārtoti pretēji alfabēta secībai ir %c,%c,%c\n", sakartots[3], sakartots[2], sakartots[1]);
+
+
+    }
+
+
+
+}
