@@ -1,0 +1,82 @@
+#include <stdio.h>
+
+void main()
+{
+    long long input_num;
+    char charNum = 1;
+    long long longNum = 1;
+    int intNum = 1;
+    char choice;
+    long long reference = 1;
+    printf("Lūdzu ievadiet decimālu skaitli: ");
+    scanf("%lld99", &input_num);
+    printf("Lūdzu ievadiet tā datu tipa pirmo burtu, kādā vēlaties iegūt rezultātu: ");
+    scanf(" %c99", &choice);
+    long long result_reference = 1;
+    for(int counter = 1;counter < input_num; counter++)
+    {
+        result_reference *= (counter + 1);
+    }
+    if(choice == 'c')
+    {
+        for(int counter = 1;counter < input_num; counter++)
+        {
+        
+            charNum *= (counter + 1);
+            reference *= (counter + 1);
+            if(charNum != reference){
+                break;
+            }
+        }
+        if((long long)charNum != result_reference)
+        {
+            printf("Izvēlēts nepietiekama izmēra datu tips, faktoriālis no %lld neietilpst char datu tipā\n", input_num);
+            
+         
+        
+        }else
+        {
+            
+         printf("Faktoriālis no skaitļa %lld ir %d\n", input_num, charNum);    
+        }   
+    
+    reference = input_num;
+    }else if(choice == 'i')
+    {
+        for(int counter = 1;counter < input_num; counter++)
+        {
+        
+            intNum *= (counter + 1);
+            reference *= (counter + 1);
+           
+            if(intNum != reference){
+                break;
+            }
+            }if((long long)intNum != result_reference)
+            {
+                printf("Izvēlēts nepietiekama izmēra datu tips, faktoriālis no %lld neietilpst int datu tipā\n", input_num);
+             
+         
+         
+        } else
+        {
+            printf("Faktoriālis no skaitļa %lld ir %d\n", input_num, intNum);
+            
+        }  
+        
+    reference = input_num;
+    }else if(choice == 'l')
+    {
+        for(int counter = 1;counter < input_num; counter++)
+        {
+        
+            longNum *= (counter + 1);
+            reference *= (counter + 1);
+            if(longNum != reference){
+                break;
+            }
+        }
+        printf("Skaitļa %lld faktoriālis ir %lld\n", input_num, longNum);
+
+    }
+}
