@@ -13,18 +13,20 @@ void main()
     scanf(" %c99", &choice);
     if(choice == 'c')
     {
-        unsigned char reference = 1;
+        char reference = 1;
         for(int counter = 1;counter < input_num; counter++)
         {
         
             charNum *= (counter + 1);
-            reference *= (counter + 1);
-            if(charNum != reference){
-                break;
+            reference *= counter;
+            if((charNum/(counter + 1)) != reference){
+                
                 printf("Izvēlēts nepietiekama izmēra datu tips, faktoriālis no %lld neietilpst char datu tipā\n", input_num);
+            
+                break;
             }
         }
-        if(charNum == reference)
+        if(charNum == reference * input_num)
         {
             printf("Faktoriālis no skaitļa %lld ir %d\n", input_num, charNum); 
         }
@@ -33,37 +35,41 @@ void main()
     
     }else if(choice == 'i')
     {
-        unsigned int reference = 1;
+        int reference = 1;
         for(int counter = 1;counter < input_num; counter++)
         {
         
             intNum *= (counter + 1);
-            reference *= (counter + 1);
-            if(intNum != reference){
-                break;
+            reference *= counter;
+            if(intNum/(counter + 1) != reference){
+                
                 printf("Izvēlēts nepietiekama izmēra datu tips, faktoriālis no %lld neietilpst int datu tipā\n", input_num);
+            
+                break;
             }
         }
-        if(intNum == reference)
+        if(intNum == reference * input_num)
         {
             printf("Faktoriālis no skaitļa %lld ir %d\n", input_num, intNum); 
         }
     }else if(choice == 'l')
     {
-        unsigned long long reference = 1;
+        long long reference = 1;
         for(long long counter = 1;counter < input_num; counter++)
         {
         
             longNum *= (counter + 1);
-            reference *= (counter + 1);
-            if(longNum != reference){
+            reference *= counter;
+            if(longNum/(counter + 1) != reference){
+                
+                printf("Izvēlēts nepietiekama izmēra datu tips, faktoriālis no %lld neietilpst long long datu tipā\n", input_num);
+            
                 break;
-                printf("Izvēlēts nepietiekama izmēra datu tips, faktoriālis no %lld neietilpst char datu tipā\n", input_num);
             }
         }
-        if(longNum == reference)
+        if(longNum == reference * input_num)
         {
-            printf("Faktoriālis no skaitļa %lld ir %d\n", input_num, charNum); 
+            printf("Faktoriālis no skaitļa %lld ir %lld\n", input_num, longNum); 
         }
     }
 }
