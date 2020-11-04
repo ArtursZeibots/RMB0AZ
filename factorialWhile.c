@@ -11,22 +11,22 @@ void main()
     scanf("%lld99", &input_num);
     printf("Lūdzu ievadiet tā datu tipa pirmo burtu, kādā vēlaties iegūt rezultātu: ");
     scanf(" %c99", &choice);
-    int counter = 2;
+    int counter = 1;
     if(choice == 'c')
     {
         char reference = 1;
         while(counter <= input_num)
         {
             
-            charNum *= counter;
+            charNum *= (counter + 1);
             
             
-               reference *= (counter - 1); 
+               reference *= counter; 
                 
             
             
             
-            if((charNum/counter) != reference)
+            if((charNum/(counter + 1)) != reference)
             {
                 
                 printf("Char datu tips ir pārāk mazs, lai glabātu %lld faktoriāli\n", input_num);
@@ -47,15 +47,15 @@ void main()
         while(counter <= input_num)
         {
             
-            intNum *= counter;
+            intNum *= (counter + 1);
             
             
-               reference *= (counter - 1); 
+               reference *= counter; 
                 
             
             
             
-            if((intNum/counter) != reference)
+            if((intNum/(counter + 1)) != reference)
             {
                 
                 printf("Int datu tips ir pārāk mazs, lai glabātu %lld faktoriāli\n", input_num);
@@ -77,15 +77,15 @@ void main()
         while(counter <= input_num)
         {
             
-            longNum *= counter;
+            longNum *= (counter + 1);
             
             
-               reference *= (counter - 1); 
+               reference *= counter; 
                 
             
             
             
-            if((longNum/counter) != reference)
+            if((longNum/(counter + 1)) != reference)
             {
                 
                 printf("Long long datu tips ir pārāk mazs, lai glabātu %lld faktoriāli\n", input_num);
