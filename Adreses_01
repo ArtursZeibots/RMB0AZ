@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+void main()
+{
+    char a = 'A';
+    int b = 5;
+    double c = 3.6;
+    
+    //printf("sizeof funkcijas izmērs %lu\n", sizeof(sizeof(a)));
+    //printf("sizeof funkcijas izmērs %lu\n", sizeof(sizeof(b)));
+    //printf("sizeof funkcijas izmērs %lu\n", sizeof(sizeof(c)));
+    
+    printf("a adrese %p\n", &a);
+    printf("a adreses izmērs %lu\n", sizeof(&a));
+    printf("vērtības pēc šīs adreses %d\n", *(&a));
+    printf("vērtības izmērs  baitos pēc šīs adreses %lu\n\n", sizeof(*(&a)));
+    
+    printf("b adrese %p\n", &b);
+    printf("b adreses izmērs %lu\n", sizeof(&b));
+    printf("vērtības pēc šīs adreses %d\n", *(&b));
+    printf("vērtības izmērs  baitos pēc šīs adreses %lu\n\n", sizeof(*(&b)));
+    
+    printf("c adrese %p\n", &c);
+    printf("c adreses izmērs %lu\n", sizeof(&c));
+    printf("vērtības pēc šīs adreses %d\n", *(&c));
+    printf("vērtības izmērs  baitos pēc šīs adreses %lu\n\n", sizeof(*(&c)));
+}
