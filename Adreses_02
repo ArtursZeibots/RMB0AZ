@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+void main()
+{
+    int a = 5;
+    int *pa = &a;
+    
+    printf("Adrese pirms izmaiņām %p\n", pa);
+    printf("mainīgais pirms izmaiņām %d\n\n", a);
+    
+    *pa -= 1;
+    
+    printf("Adrese pēc izmaiņām %p\n", pa);
+    printf("mainīgais pēc izmaiņām %d\n", a);
+}
