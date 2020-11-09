@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+
+void test(int *paa)
+{
+    printf("Adrese no test %p\n", paa);
+    printf("mainīgais no test %d\n\n", *paa);
+    *paa += 10;
+}
+void main()
+{
+    int a = 5;
+    int *pa = &a;
+    
+    printf("Adrese pirms izmaiņām no main %p\n", pa);
+    printf("mainīgais pirms izmaiņām no main %d\n\n", a);
+    
+    test(pa);
+    
+    printf("Adrese pēc izmaiņām %p\n", pa);
+    printf("mainīgais pēc izmaiņām %d\n", a);
+}
