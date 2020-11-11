@@ -1,0 +1,71 @@
+//daudz kļūdas
+#include <stdio.h>
+
+#define N 4
+
+int main()
+{
+    char rinda1[N] = "abc"; //ja "abcd" 0=a 1=b 2=c 3=d | 4=\0 rindas garums = N-1
+    char rinda2[] = {'e', 'f', 'g'};
+    char rinda3[] = "ghijk";
+    char *rinda4 = "lmnop";
+    
+    printf("1. rinda pirms izmaiņām: %s\n", rinda1);
+    
+    printf("Ievadiet kādu tekstu: ");
+    scanf("%s", rinda1);
+    printf("Ievadītais teksts: %s\n", rinda1);
+    
+    char *darba = rinda2;
+    int garums = 0, i = 0;
+    
+    while(*darba != '\0')
+    {
+        garums++;
+        printf("rinda1: %d simbola dec kods - %d un simbols - %c\n",i, *darba, *darba); // *rinda+1
+        darba = darba + 1;
+        i++;
+    }
+    garums = garums + 1;
+    printf("1. rindas izmēŗas baitos - %d un simbolos - %d\n",garums*sizeof(char), garums);
+
+    darba = rinda2;
+    garums = 0, i = 0;
+    
+    while(*darba != '\0')
+    {
+        garums++;
+        printf("rinda2: %d simbola dec kods - %d un simbols - %c\n",i, *darba, *darba); // *rinda+1
+        darba = darba + 1;
+        i++;
+    }
+    garums = garums + 1;
+    printf("2. rindas izmēŗas baitos - %d un simbolos - %d\n",garums*sizeof(char), garums);
+
+    darba = rinda3;
+    garums = 0, i = 0;
+    
+    while(*darba != '\0')
+    {
+        garums++;
+        printf("rinda3: %d simbola dec kods - %d un simbols - %c\n",i, *darba, *darba); // *rinda+1
+        darba = darba + 1;
+        i++;
+    }
+    garums = garums + 1;
+    printf("3. rindas izmēŗas baitos - %d un simbolos - %d\n",garums*sizeof(char), garums);
+
+    darba = rinda4;
+    garums = 0, i = 0;
+    
+    while(*darba != '\0')
+    {
+        garums++;
+        printf("rinda4: %d simbola dec kods - %d un simbols - %c\n",i, *darba, *darba); // *rinda+1
+        darba = darba + 1;
+        i++;
+    }
+    garums = garums + 1;
+    printf("4. rindas izmēŗas baitos - %d un simbolos - %d\n",garums*sizeof(char), garums);
+    return 0;
+}
