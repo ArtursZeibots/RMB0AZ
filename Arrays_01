@@ -1,0 +1,62 @@
+#include <stdio.h>
+#define N 4
+
+int main()
+{
+    char rinda1[N] = "abc"; //ja "abcd" 0=a 1=b 2=c 3=d | 4=\0 rindas garums = N-1
+    char rinda2[] = {'e', 'f', 'g'};
+    char rinda3[] = "ghijk";
+    char *rinda4 = "lmnop";
+    
+    printf("pirmās simb rindas izmērs baitos - %lu un simbolos - %lu\n", sizeof(rinda1), sizeof(rinda1)/sizeof(char));
+    printf("otrās simb rindas izmērs baitos - %lu un simbolos - %lu\n", sizeof(rinda2), sizeof(rinda2)/sizeof(char));
+    printf("trešās simb rindas izmērs baitos - %lu un simbolos - %lu\n", sizeof(rinda3), sizeof(rinda3)/sizeof(char));
+    printf("ceturtās simb rindas izmērs baitos - %lu\n", sizeof(rinda1));
+    
+    for(int i = 0; i<N+2;i++)
+    {
+        printf("rinda1: %d simbola dec kods - %d\n", i, rinda1[i]); // *rinda+1
+    }
+    
+    printf("\n");
+    
+    for(int i = 0; i<3;i++)
+    {
+        printf("rinda2: %d simbola dec kods - %d\n", i, rinda2[i]); // *rinda+1
+    }
+    
+    printf("\n");
+    
+    for(int i = 0; i<6;i++)
+    {
+        printf("rinda3: %d simbola dec kods - %d\n", i, rinda3[i]); // *rinda+1
+    }
+    
+    printf("\n");
+    
+   /* for(int i = 0; i<8;i++)
+    {
+        printf("rinda4: %d simbola dec kods - %d\n", i, rinda4[i]); // *rinda+1
+    }
+    
+    printf("\n");
+    
+    for(int i = 0; i<8;i++)
+    {
+        printf("rinda4: %d simbola dec kods - %p\n", i, rinda4+1); // *rinda+1
+    }*/
+    
+    char *darba = rinda4;
+    int garums = 0, i = 0;
+    
+    while(*darba != '\0')
+    {
+        garums++;
+        printf("rinda4: %d simbola dec kods - %d un simbols - %c\n",i, *darba, *darba); // *rinda+1
+        darba = darba + 1;
+        i++;
+    }
+    garums = garums + 1;
+    printf("4. rindas izmēŗas baitos - %d un simbolos - %d\n",garums*sizeof(char), garums);
+    return 0;
+}
