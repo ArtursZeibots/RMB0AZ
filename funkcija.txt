@@ -1,0 +1,3 @@
+Funkcija Datormācībai RTR105
+
+cosh(x/2)
