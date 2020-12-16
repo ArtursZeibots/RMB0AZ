@@ -25,6 +25,10 @@ void main()
   z=z* pow(x,2)/(2*a*(2*a-1));
   s+=z;
   fprintf(printFile,"%d. %Lf     %Lf\n", a, z, s);
+  if((z/pow(x,2)/(2*a*(2*a-1)) == z))
+  {
+   break;
+  }
 
  }
 
