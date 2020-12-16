@@ -6,6 +6,8 @@ void main()
  float lowerLimit;
  float upperLimit;
  int valueCount;
+ float xValues[] = {1,1};
+ float yValues[] = {1,1};
 
  printf("Šī programma aprēķina cosh(x/2) vērtības un saglabā tās failā data.txt\n");
  printf("Lūdzu ievadiet x minimālo vērtību: ");
@@ -14,21 +16,31 @@ void main()
  scanf(" %f99", &upperLimit);
  printf("Lūdzu ievadiet cik vērtības aprēķināt:  ");
  scanf(" %d99", &valueCount);
- 
-  FILE * dataFile;
+
+ xValues[0] = lowerLimit;
+
+ float stepSize = (upperLimit - lowerLimit)/(float)valueCount;
+
+ for(int a=1; a<=valueCount; a++)
+ {
+  xValues[a] = xValues[a-1] + stepSize;
+ }
+
+ for(int b = 0; b<=valueCount; b++)
+ {
+  yValues[b] = cosh((xValues[b])/2);
+ }
+
+ FILE * dataFile;
 
  dataFile = fopen("data.txt", "w");
 
  fprintf(dataFile,"# cosh vērtības\n");
  fprintf(dataFile,"# X         # Y\n");
 
- float stepSize = (upperLimit - lowerLimit)/((float)valueCount-1);
-
- for(int z = 0; z<valueCount; z++)
+ for(int z = 1; z<=valueCount; z++)
  {
-   float x = lowerLimit + (stepSize*(float)z);
-   float y = cosh(x/2);
-  fprintf(dataFile,"%.3f         %.3f\n", x, y);
+  fprintf(dataFile,"%.3f         %.3f\n", xValues[z], yValues[z]);
  }
 
  fclose(dataFile);
