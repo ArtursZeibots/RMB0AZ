@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    double x,y,delta_x = 0.1,b=100.0;
+    double prim[100-1], f[100], primII[100-1], xi[100];
+    x=0.0;
+    printf("x           y          y_prim           y_2prim\n");
+    for(int i = 0;i<b;i++)
+    {
+        xi[i]=x;
+        f[i]=cosh(x/2);
+        x+=delta_x;
+    }
+    x=0;
+    for(int i = 0; i<b-1; i++)
+    {
+        prim[i]=sinh(x/2)*0.5*delta_x;
+        x+=delta_x;
+    }
+    for(int i = 0; i<b-1; i++)
+    {
+        primII[i]=(f[i+1]-f[i])/delta_x;
+    }
+    for(int i = 0; i<b-1; i++)
+    {
+        printf("%lf          %lf        %lf          %lf\n",xi[i],f[i], prim[i],primII[i]);
+    }
+    
+
+    return 0;
+}
