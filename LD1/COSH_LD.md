@@ -32,7 +32,7 @@ void main()
   z=z* pow(x,2)/(2*a*(2*a-1));
   s+=z;
   fprintf(printFile,"%d. %Lf     %Lf\n", a, z, s);
-  if((fabs(z-z/pow(x,2)/(2*a*(2*a-1))) < 0.00001 ))
+  if((fabs(z-z/pow(x,2)/(2*a*(2*a-1))) < 0.000001 ))
   {
    break;
   }
@@ -87,8 +87,16 @@ long double z=1.0;
 Šajā koda daļā tiek aprēķināta x vērtība izmantojot Teilora rindu. Šī daļa sākās ar divu, aprēķinos vajadzīgu mainīgo deklarēšanu un vērtību piešķiršanu tiem.
 Pēc tam seko *for* cikls, kurā tiek aprēķināta Teilora rindas locekļu summa. Šajā ciklā ir arī if operācija, kuras mērķis ir beigt ciklu, ja z vērtības vairs nemainās pirms a ir sasniedzis skaitli 500.
 ### Izdrukas fails
-
-
+```
+x=2.000000             y=1.543081
+###################
+1. 0.500000     1.500000
+2. 0.041667     1.541667
+3. 0.001389     1.543056
+4. 0.000025     1.543080
+5. 0.000000     1.543081
+6. 0.000000     1.543081
+```
 ### Secinājumi
 
 Funkcijas vērtības aprēķināšana izmantojot Teilora rindu man šķiet nevajadzīgi sarežģīta, ja ir iespējams iegūt funkcijas vērtību izmantojot math.h pieejamās funkcijas.
