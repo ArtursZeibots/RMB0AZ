@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include<math.h>
+double rectIntegral(double iedala, double start, double end);
+double trapIntegral(double start, double end, double incr);
+double simpIntegral(double first, double second, double sum, double count, double prec);
+int main()
+{
+    double x, a = 0, b = 10, prec, integral1 = 0, integral2, h, sum;
+    int k,n=1000;
+    sum = cosh(a/2)-cosh((a+n*prec)/2);
+    prec = (b-a)/n;
+    integral1 = rectIntegral(prec, a, b);
+    printf("######################################\n");
+    trapIntegral(a,b, prec);
+    simpIntegral(a,b,sum,n,prec);
+    return 0;
+}
+
+double rectIntegral(double iedala, double start, double end)
+{
+    double x=start, integ = 0;
+    
+    while(x<end) 
+    { // Taisnstūra metode
+        x+=iedala;
+        integ+=(x-start)*(cosh(start/2));
+        start=x;
+        //n*=2;
+        printf("%lf\n", integ);
+    }
+    return integ;
+}
+
+double trapIntegral(double start, double end, double incr)
+{
+    double x = start, integ = 0;
+    while(x<end)
+    { // Trapaces metode
+        x += incr;
+        integ +=(cosh(x/2)+cosh(start/2))/2*(x-start);
+        start = x;
+    }
+    
+    printf("A %lf\n", integ);
+}
+
+double simpIntegral(double first, double second, double sum, double count, double prec)
+{
+    printf("integ #####################\n");
+    double integ = 0; double x;
+    int i;
+    for(i=0; i<count;i++);
+    {
+        integ = sum + 4*cosh((first+i*prec)/2)+2*cosh((first+(1+i)*prec)/2);
+        printf("%lf\n", integ);
+    }
+    
+    integ*=(1.0/3);
+    
+    printf("integ #####################\n %lf", integ);
+    
+}
