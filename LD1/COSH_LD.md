@@ -1,5 +1,5 @@
 #### 1. Laboratorijas darbs
-## F(x)=Cosh(x/2) vērtības aprēķināšāna izmantojot Teilora rindas
+## F(x)=Cosh(x/2) vērtības aprēķināšana izmantojot Teilora rindas
 
 ### Darba uzdevums
 Izstrādāt programmu, kura lietotāja ievadītai x vērtībai aprēķina funkcijas vērtību, izmantojot Teilora rindas.
@@ -32,7 +32,7 @@ void main()
   z=z* pow(x,2)/(2*a*(2*a-1));
   s+=z;
   fprintf(printFile,"%d. %Lf     %Lf\n", a, z, s);
-  if((z/pow(x,2)/(2*a*(2*a-1)) == z))
+  if((fabs(z-z/pow(x,2)/(2*a*(2*a-1))) < 0.00001 ))
   {
    break;
   }
@@ -77,7 +77,7 @@ long double z=1.0;
   z=z* pow(x,2)/(2*a*(2*a-1));
   s+=z;
   fprintf(printFile,"%d. %Lf     %Lf\n", a, z, s);
-  if((z/pow(x,2)/(2*a*(2*a-1)) == z))
+  if(fabs(z-(z/pow(x,2)/(2*a*(2*a-1))) < 0.000001))
   {
    break;
   }
