@@ -8,6 +8,7 @@ int main()
  //mainīgie
  const int N = 100;
  double x,a,b,deltax;
+ int counter = 0;
  double xi[N], y[N], f_prim_a[N], f_prim_d[N], s_prim_a[N], s_prim_d[N];
  //ievade
  printf("Šī programma aprēķina cosh(x/2) prim1, prim2,\n izmantojot gan analītisko formulu, gan diferenic.\n");
@@ -29,12 +30,13 @@ int main()
  for(int i = 0; i<N; i++)
   {
     if(x>b) break;
+    counter++;
     xi[i] = x;
     y[i] = cosh(x/2);
     x+=deltax;
   }
  //šī daļā aprēķina visus prim
- for(int i = 0; i<N; i++)
+ for(int i = 0; i<counter; i++)
   {
     if(xi[i]>b)break;
     f_prim_a[i] = 0.5*(sinh((xi[i])/2));
@@ -45,9 +47,9 @@ int main()
 
  fprintf(dataFile,"\tx\tcosh(x)\t\t         cosh\'(x/2)\t         cosh\'(x/2)\t         cosh\"(x/2)\t        cosh\"(x/2)\n");
  fprintf(dataFile,"\t\tanalytic formula\tfinite difference\tanalytic formula\tfinite difference\n");
- for(int i = 0; i<N; i++)
+ for(int i = 0; i<counter; i++)
   {
-    fprintf(dataFile,"\t%.2lf\t%.2lf\t%.2lf\t%.2lf\t%.2lf\t%.2lf\n", xi[i], y[i], f_prim_a[i], f_prim_d[i], s_prim_a[i], s_prim_d[i]);
+    fprintf(dataFile,"%.2lf\t%.2lf\t\t%.2lf\t\t\t%.2lf\t\t\t%.2lf\t\t\t%.2lf\n", xi[i], y[i], f_prim_a[i], f_prim_d[i], s_prim_a[i], s_prim_d[i]);
   }
  fclose(dataFile);
 
