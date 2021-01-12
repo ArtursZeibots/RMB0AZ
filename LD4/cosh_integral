@@ -1,37 +1,40 @@
 #include <stdio.h>
 #include<math.h>
-double rectIntegral(double iedala, double start, double end);
-double trapIntegral(double start, double end, double incr);
-double simpIntegral(double first, double second, double sum, double count, double prec);
+void rectIntegral(double start, double end, double iedala);
+void trapIntegral(double start, double end, double incr);
+void simpIntegral(double first, double second, double prec, double count);
 int main()
 {
-    double x, a = 0, b = 10, prec, integral1 = 0, integral2, h, sum;
-    int k,n=1000;
-    sum = cosh(a/2)-cosh((a+n*prec)/2);
-    prec = (b-a)/n;
-    integral1 = rectIntegral(prec, a, b);
-    printf("######################################\n");
-    trapIntegral(a,b, prec);
-    simpIntegral(a,b,sum,n,prec);
+    double x,a,b, increment;
+    int n;
+    printf("Šī programma aprēķina cosh(x/2) integrāļa vērtību.\n");
+    printf("Lūdzu ievadiet apakšējo robežu: ");
+    scanf(" %lf", &a);
+    printf("Lūdzu ievadiet augšējo robežu: ");
+    scanf(" %lf", &b);
+    printf("Lūdzu cik daļās sadalīt intervālu: ");
+    scanf(" %d", &n);
+    increment = (b-a)/n;
+    rectIntegral(a,b,increment);
+    trapIntegral(a,b, increment);
+    simpIntegral(a,b,increment, n);
     return 0;
 }
 
-double rectIntegral(double iedala, double start, double end)
+void rectIntegral(double a, double b, double iedala)
 {
-    double x=start, integ = 0;
+    double x=a, integ = 0;
     
-    while(x<end) 
+    while(x<b) 
     { // Taisnstūra metode
         x+=iedala;
-        integ+=(x-start)*(cosh(start/2));
-        start=x;
-        //n*=2;
-        printf("%lf\n", integ);
+        integ+=(x-a)*(cosh(a/2));
+        a=x;
     }
-    return integ;
+       printf("Integrālis izmantojot četrstūra metodi ir %lf\n", integ);
 }
 
-double trapIntegral(double start, double end, double incr)
+void trapIntegral(double start, double end, double incr)
 {
     double x = start, integ = 0;
     while(x<end)
@@ -41,22 +44,21 @@ double trapIntegral(double start, double end, double incr)
         start = x;
     }
     
-    printf("A %lf\n", integ);
+    printf("Integrālis izmantojot trapeces metodi ir %lf\n", integ);
 }
 
-double simpIntegral(double first, double second, double sum, double count, double prec)
+void simpIntegral(double first, double second, double prec, double count)
 {
-    printf("integ #####################\n");
-    double integ = 0; double x;
+    double integ = 0;
+    double x;
     int i;
-    for(i=0; i<count;i++);
+    for(i=0;i<count;i++);
     {
-        integ = sum + 4*cosh((first+i*prec)/2)+2*cosh((first+(1+i)*prec)/2);
-        printf("%lf\n", integ);
+        integ += 4*cosh((first+i*prec)/2)+2*cosh((first+(1+i)*prec)/2);
     }
     
     integ*=(1.0/3);
     
-    printf("integ #####################\n %lf", integ);
+    printf("Integrālis izmantojot Simpsona 1/3 metodi ir %lf", integ);
     
 }
